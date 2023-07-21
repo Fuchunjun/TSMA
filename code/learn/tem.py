@@ -1,6 +1,11 @@
-f=lambda x:2*x
-g=lambda x:3*x
-def tem(f,a,b):
-    return f(a)+f(b)
+def tem(list):
+    list.append(3)
 
-print(tem(g,5,5))
+    return (list[0], list)
+
+list=[1, 2, 3, 4, 5]
+
+a,b=tem(list)
+
+print(a)
+print(b)
