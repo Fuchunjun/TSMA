@@ -16,6 +16,9 @@ def sun冒泡排序(list):
                 list[j],list[j+1]=list[j+1],list[j]
     return list
 
+def sun快速排序(list):
+    
+
 list=[1,65,6,3,489,341,6,31,54,6,651,651,654,6,132,1,165,156,15,135,1,48,64,641,6,15,165,16,139,46,89,354]
 print(sun直接选择排序(list))
 print(sun冒泡排序(list))
