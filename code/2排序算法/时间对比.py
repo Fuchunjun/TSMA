@@ -2,10 +2,11 @@ import 排序
 import random
 import time 
 
-list = [random.randint(0,50) for i in range(0,20)]
+list = [random.randint(0,99999999) for i in range(0,1000000)]
 
 T1 = time.perf_counter()
-排序.QuickSort_改(list)
+排序.DirectSort(list)
 T2 = time.perf_counter()
-print(list)
 print((T2-T1),'s')
+
+
