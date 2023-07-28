@@ -2,24 +2,24 @@
 # 直接选择排序
 def directsort(list):
     for i in range(len(list)):
-        min = i
+        mini = i
         for j in range(i + 1, len(list)):
-            if list[j] < list[min]:
-                min = j
-        list[i], list[min] = list[min], list[i]
+            if list[j] < list[mini]:
+                mini = j
+        list[i], list[mini] = list[mini], list[i]
     return list
 
 
 # 冒泡排序
 def bubblesort(list):
-    for i in range(0, len(list) - 1):
-        for j in range(0, len(list) - 1 - i):
+    for i in range(len(list) - 1):
+        for j in range(len(list) - 1 - i):
             if list[j] > list[j + 1]:
                 list[j], list[j + 1] = list[j + 1], list[j]
     return list
 
 
-# 快速排序
+# 快速排序 自己写的一点
 def __partition_sun(list, s, e):  # s,e:起始，结束位置  #这个函数是自己理解写的，效率不如下面的__partition
     p = list[s]
     l = s
@@ -33,7 +33,7 @@ def __partition_sun(list, s, e):  # s,e:起始，结束位置  #这个函数是�
     list[s], list[l] = list[l], list[s]
     return l  # 返回基准位置
 
-
+#快速排序
 def __partition(list, s, e):
     p = list[s]
     l = s
@@ -113,6 +113,7 @@ def heapsort(list):
         list[0],list[l]=list[l],list[0]
     return list
 '''
+#堆排序
 def adjustdown(list, p, l):
     s = 2 * p + 1
     while s < l:
@@ -137,6 +138,6 @@ def heapsort(list):
     return list
 
 
-list = [6, 8, 4, 3, 9, 54, 5]
+list1 = [6, 8, 4, 3, 9, 54, 5]
 if __name__ == "__main__":
-    print(heapsort(list))
+    print(directsort(list1))
