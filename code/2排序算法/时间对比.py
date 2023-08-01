@@ -1,16 +1,17 @@
 import 排序
 import random
-import time 
+import time
 
-sum1=0
-for _ in range(10):
-    list1=[random.randint(0,1000000) for _ in range(1000000)]
-    T1 = time.perf_counter()
-    排序.heapsort(list1)
-    T2 = time.perf_counter()
-    c=T2-T1
-    print(c,'s')
-    sum1+=c
-    list1.clear()
-print('平均用时：',sum1/10)
+def bubblesort(list):
+    for i in range(len(list) - 1):
+        for j in range(len(list) - 1 - i):
+            if list[j] > list[j + 1]:
+                list[j], list[j + 1] = list[j + 1], list[j]
+    return list
 
+
+arr = [random.randint(1, 100000) for _ in range(0, 100000)]
+t1 = time.perf_counter()
+bubblesort(arr)
+t2 = time.perf_counter()
+print(t2 - t1)

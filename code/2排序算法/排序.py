@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+import sys
+sys.setrecursionlimit(5000)
+
 # 直接选择排序
 def directsort(list):
     for i in range(len(list)):
