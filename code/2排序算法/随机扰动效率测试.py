@@ -4,19 +4,18 @@ import time
 
 n=100000    #数组长度
 
-probability=[0.001,0.01,0.1,0.2,0.5]
+probability=[0.001,0.01,0.1,0.2,0.5]    #每个元素随机扰动概率
 
 for p in probability:
-    arro = [random.randint(1, n) for _ in range(0, n)]
+    arro = [random.randint(1, n) for _ in range(n)]
     arr = 排序.quicksort_改(arro)
-    for i in range(0, n):
+    for i in range(n):
         if random.uniform(0, 1) < p:
             arr[i] = random.randint(1, n)
     T1 = time.perf_counter()
     排序.quicksort_改(arr)
     T2 = time.perf_counter()
     print(T2 - T1)
-
 
 '''
 结果记录
@@ -25,5 +24,6 @@ for p in probability:
 冒泡排序	    338.0857 s	381.1712 s	452.6590 s	479.8770 s	577.0643 s
 快速排序	    - s	        - s	        - s	        - s	        - s         错误代码 -1073741571 (0xC00000FD) StackOverflow（栈区溢出）
 改进快速排序	0.1552 s	0.1511 s	0.1747 s	0.1739 s	0.2375 s
-堆排序	    0.3732 s	0.3546 s	0.3473 s	0.3671 s	0.4312 s
+堆排序	        0.3732 s	0.3546 s	0.3473 s	0.3671 s	0.4312 s
 '''
+

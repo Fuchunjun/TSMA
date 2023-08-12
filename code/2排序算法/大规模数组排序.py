@@ -3,16 +3,18 @@ import random
 import time
 
 sum1=0
-for _ in range(10):
-    list=[random.randint(1,10000) for _ in range(10000)]
-    T1 = time.perf_counter()
-    排序.quicksort(list)
-    T2 = time.perf_counter()
-    c=T2-T1
-    print(c,'s')
-    sum1+=c
-    list.clear()
-print('平均用时：',sum1/10)
+n=[1000,10000,100000]
+
+for n in n:
+    for _ in range(10):
+        listo=[random.randint(1,n) for _ in range(n)]
+        T1 = time.perf_counter()
+        排序.bubblesort(listo)
+        T2 = time.perf_counter()
+        c=T2-T1
+        sum1+=c
+        listo.clear()
+    print('平均用时：',sum1/10)
 
 '''
 结果记录 
