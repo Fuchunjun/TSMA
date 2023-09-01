@@ -1,6 +1,5 @@
 
 from 拓扑排序 import topologicalsort
-
 def Dijkstra_TopologicalOrder(net,s):
     l=topologicalsort(net)
     print(l)
@@ -34,4 +33,6 @@ net={0:{'2':0.26},
      6:{'0':-1.4,'2':-1.2,'4':-1.25},
      7:{'2':0.34}}
 
-Dijkstra_TopologicalOrder(net,s=5)
+
+if __name__=='__main__':
+    Dijkstra_TopologicalOrder(net,s=5)
