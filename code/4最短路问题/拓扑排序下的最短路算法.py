@@ -1,5 +1,24 @@
 
-from 拓扑排序 import topologicalsort
+def topologicalsort(net):
+    l=0
+    in_degree={i:0 for i in range(len(net))}
+    for _,i in net.items():
+        for j,_ in i.items():
+            j=int(j)
+            in_degree[j]+=1
+    Q=[q for q in in_degree if in_degree[q]==0]
+    res=[]
+    while Q:
+        i=Q.pop()
+        res.append(i)
+        l+=1
+        for j,_ in net[i].items():
+            j=int(j)
+            in_degree[j]-=1
+            if in_degree[j]==0:
+                Q.append(j)
+    return res
+
 def Dijkstra_TopologicalOrder(net,s):
     l=topologicalsort(net)
     print(l)

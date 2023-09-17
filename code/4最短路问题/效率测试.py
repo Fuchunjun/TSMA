@@ -26,8 +26,6 @@ def readnetwork(path):
     return net
 
 
-
-
 path=r'code\4最短路问题\net\ChicagoSketch_net.xlsx'
 net=readnetwork(path)
 import 标号设置算法
@@ -35,7 +33,7 @@ import 标号修正算法
 import time
 t1=time.perf_counter()
 for i in range(1,len(net)+1):
-    标号修正算法.labelcorrecting_2Q(net,1)
+    标号设置算法.dijkstra_t_heap(net,i)
 t2=time.perf_counter()
 print(t2-t1)
 
@@ -43,14 +41,13 @@ print(t2-t1)
 '''
 结果记录
 算法                                时间 
-Label-setting算法	                36.26434
-T标号排序的Label-setting算法	     10.59079
-T标号堆排序的Label-setting算法       3.073973
-单队列尾部Label-correcting算法	     3.666588
-单队列混合Label-correcting算法	     1.640590
-双队列Label-correcting算法	         1.681312
+Label-setting算法	                34.83081
+T标号排序的Label-setting算法	     10.23794
+T标号堆排序的Label-setting算法       2.962371
+单队列尾部Label-correcting算法	     3.320080
+单队列混合Label-correcting算法	     1.877315
+双队列Label-correcting算法	         1.876812
 '''
-
 
 """ 
 标号设置算法.dijkstra(net,1)
