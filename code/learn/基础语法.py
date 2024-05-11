@@ -20,3 +20,7 @@ print(r'123\n456')      #不转义
 a=input('输入一个数')
 print(a)
 
+a=[1 for _ in range(5)]
+print(a)
+a=[0 for _ in range(10)]
+print(a)

@@ -141,7 +141,6 @@ def mutate_随机插入变异(mutate_set):
         mutate_children.append(child)
     return mutate_children
 
-
 #锦标赛选择,二元
 def championship_select(population,population_num):
     new_population=[]
@@ -156,7 +155,6 @@ def championship_select(population,population_num):
             new_population.append(winner)
             count+=1
     return new_population
-
 
 def ga_tsp(path,population_num,generation_num):
     gen=[0]
@@ -196,13 +194,34 @@ def ga_tsp(path,population_num,generation_num):
     plt.plot(gen,best_distance_history)
     plt.title('{}_{}_{}'.format(population_num,generation_num,best_distance))
     plt.savefig(r'code\5旅行商问题\结果\{}_{}_{}.jpg'.format(population_num,generation_num,best_distance))
+    plt.clf()
     
-
 if __name__=='__main__':
     for _ in range(10):
-        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=28,generation_num=18000)
+        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=25,generation_num=15000) 
+    for _ in range(10):
+        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=26,generation_num=15000) 
+    for _ in range(10):
+        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=27,generation_num=15000) 
+    for _ in range(10):
+        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=28,generation_num=15000) 
+    for _ in range(10):
+        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=29,generation_num=15000) 
+    for _ in range(10):
+        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=30,generation_num=15000) 
+    for _ in range(10):
+        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=35,generation_num=15000) 
+    for _ in range(10):
+        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=40,generation_num=15000) 
+    for _ in range(10):
+        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=45,generation_num=15000) 
+    for _ in range(10):
+        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=50,generation_num=15000) 
+    for _ in range(10):
+        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=20,generation_num=15000) 
+    for _ in range(10):
+        ga_tsp(path=r'code\5旅行商问题\net\eil51.xlsx',population_num=23,generation_num=15000) 
 
-    
 
 
 

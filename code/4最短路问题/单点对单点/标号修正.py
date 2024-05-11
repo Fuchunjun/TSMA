@@ -14,6 +14,7 @@ def one2onelabelcorrecting(net,s,e):
                 par[j]=i+1
                 if j not in Q:
                     Q.append(j)
+    print(par)
     print(f'{s}-{e}最短路路径成本：',dis[e-1])
     print('路径：',end='')
     route=[e]
